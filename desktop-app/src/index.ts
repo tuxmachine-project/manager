@@ -21,7 +21,7 @@ function createWindow() {
 	mainWindow.setMenu(null);
 
 	// Open the DevTools.
-	if (process.env.NODE_ENV != "production") {
+	if (process.env.NODE_ENV == "development") {
 		mainWindow.webContents.openDevTools();
 		mainWindow.loadURL("http://localhost:3000");
 	}
