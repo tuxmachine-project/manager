@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build": "esbuild src/index.ts --bundle --minify --external:electron --external:express --format=cjs --platform=node --outfile=app/index.js",
-    "build-web": "cd ../web;npm run build;cd ../desktop-app;cp -r ../web/dist app/web",
+    "build-web": "cd ../web;npm run build;cd ../desktop-app;mkdir -p app;cp -r ../web/dist app/web",
     "dist": "npm run build && electron-packager . tuxmachine-manager --out dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
