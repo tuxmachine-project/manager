@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const { dialog, app, BrowserWindow } = require('electron');
+const server = require('./server');
 const fs = require('fs');
 const path = require('path');
 
@@ -8,22 +9,25 @@ let mainWindow;
 function createWindow() {
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
-		//width: 1280,
-		//height: 720,
 		title: "tuxmachine-manager",
-		//fullscreen: true,
+		hidden: true,
 		webPreferences: {
 			preload: path.join(__dirname, "../preload.js")
 		}
 	});
 
-	mainWindow.loadURL("http://localhost:3000");
+	//mainWindow.hide();
 
 	mainWindow.setMenu(null);
 
 	// Open the DevTools.
 	if (process.env.NODE_ENV != "production") {
 		mainWindow.webContents.openDevTools();
+		mainWindow.loadURL("http://localhost:3000");
+	}
+	else {
+		setTimeout(server, 0);
+		mainWindow.loadURL("http://localhost:8080");
 	}
 }
 
