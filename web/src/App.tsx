@@ -11,6 +11,7 @@ function App() {
 				<h1 style={{fontSize: "10vw", marginBottom: 0}}>Welcome!</h1>
 				<p>Select a game:</p>
 				
+				<button style={{marginTop: 15}} onClick={() => {startGame("pingus");}}>Pingus</button>
 				<button style={{marginTop: 15}} onClick={() => {startGame("tuxmath");}}>Tux Math</button>
 				<button style={{marginTop: 15}} onClick={() => {startGame("tuxpaint");}}>Tux Paint</button>
 				<button style={{marginTop: 15}} onClick={() => {startGame("tuxtype");}}>Tux Typing</button>
