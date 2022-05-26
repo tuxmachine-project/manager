@@ -1,0 +1,32 @@
+{
+  "name": "@tuxmachine-project/manager",
+  "version": "0.0.1",
+  "description": "The system for using & configuring tuxmachine.",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "esbuild src/index.ts --bundle --minify --external:electron --format=cjs --platform=node --outfile=app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxmachine-project/manager.git"
+  },
+  "keywords": [
+    "tux",
+    "tuxmachine"
+  ],
+  "author": "thatretrodev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuxmachine-project/manager/issues"
+  },
+  "homepage": "https://github.com/tuxmachine-project/manager#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "electron": "^19.0.1",
+    "electron-packager": "^15.5.1",
+    "esbuild": "^0.14.39",
+    "typescript": "^4.7.2"
+  }
+}
