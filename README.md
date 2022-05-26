@@ -1,2 +1,2 @@
-# manager
-The system for using &amp; configuring tuxmachine.
+# tuxmachine-manager
+The system for using & configuring tuxmachine.
